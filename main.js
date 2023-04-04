@@ -11,18 +11,26 @@ function getComputerChoice(RNG) {
 }
 
 function getPlayerChoice() {
-    let choice = prompt("Enter Rock, Paper, or Scissors: ").toLowerCase();
+    let choice = prompt("Enter Rock, Paper, or Scissors: ");
 
     while (true) {
-        if (choice === "rock") {
-            return choice;
-        } else if (choice === "paper") {
-            return choice;
-        } else if (choice === "scissors") {
-            return choice;
+        if (choice === null) {
+            choice = prompt("Invalid input. Enter Rock, Paper, or Scissors: ");
+            continue;
         }
+        choice = choice.toLowerCase();
 
-        choice = prompt("Invalid input. Enter Rock, Paper, or Scissors: ").toLowerCase();
+        while (true) {
+            if (choice === "rock") {
+                return choice;
+            } else if (choice === "paper") {
+                return choice;
+            } else if (choice === "scissors") {
+                return choice;
+            }
+
+            choice = prompt("Invalid input. Enter Rock, Paper, or Scissors: ");
+        }
     }
 }
 

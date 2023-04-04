@@ -49,3 +49,11 @@ function getRoundResultString(roundResult) {
         return "Round Result: computer wins";
     }
 }
+
+function getGameResultString(playerPoints) {
+    if (playerPoints >= 3) {
+        return "You won!";
+    } else if (playerPoints < 3) {
+        return "You lost!";
+    }
+}

@@ -8,3 +8,19 @@ function getComputerChoice() {
         return "scissors";
     }
 }
+
+function getPlayerChoice() {
+    let choice = prompt("Enter Rock, Paper, or Scissors: ").toLowerCase();
+
+    while (true) {
+        if (choice === "rock") {
+            return choice;
+        } else if (choice === "paper") {
+            return choice;
+        } else if (choice === "scissors") {
+            return choice;
+        }
+
+        choice = prompt("Invalid input. Enter Rock, Paper, or Scissors: ").toLowerCase();
+    }
+}

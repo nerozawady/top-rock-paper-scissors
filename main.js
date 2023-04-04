@@ -1,10 +1,9 @@
-function getComputerChoice() {
-    const choice = Math.floor(Math.random() * 3);
-    if (choice === 0) {
+function getComputerChoice(RNG) {
+    if (RNG === 0) {
         return "rock";
-    } else if (choice === 1) {
+    } else if (RNG === 1) {
         return "paper";
-    } else if (choice === 2) {
+    } else if (RNG === 2) {
         return "scissors";
     }
 }

@@ -39,3 +39,13 @@ function playRound(playerChoice, computerChoice) {
         return "computer";
     }
 }
+
+function getRoundResultString(roundResult) {
+    if (roundResult === "player") {
+        return "Round Result: player wins";
+    } else if (roundResult === "tie") {
+        return "Round Result: tie";
+    } else if (roundResult === "computer") {
+        return "Round Result: computer wins";
+    }
+}

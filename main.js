@@ -24,3 +24,19 @@ function getPlayerChoice() {
         choice = prompt("Invalid input. Enter Rock, Paper, or Scissors: ").toLowerCase();
     }
 }
+
+function playRound(playerChoice, computerChoice) {
+    if ((playerChoice === "rock" && computerChoice == "scissors")
+        || (playerChoice === "paper" && computerChoice == "rock")
+        || (playerChoice === "scissors" && computerChoice == "paper")) {
+        return "player";
+    } else if ((playerChoice === "rock" && computerChoice == "rock")
+        || (playerChoice === "paper" && computerChoice == "paper")
+        || (playerChoice === "scissors" && computerChoice == "scissors")) {
+        return "tie";
+    } else if ((playerChoice === "rock" && computerChoice == "paper")
+        || (playerChoice === "paper" && computerChoice == "scissors")
+        || (playerChoice === "scissors" && computerChoice == "rock")) {
+        return "computer";
+    }
+}

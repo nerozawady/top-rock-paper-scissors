@@ -1,3 +1,5 @@
+const MAX_ROUNDS = 5;
+
 function getComputerChoice(RNG) {
     if (RNG === 0) {
         return "rock";
@@ -57,3 +59,42 @@ function getGameResultString(playerPoints) {
         return "You lost!";
     }
 }
+
+function game() {
+    let rounds = 0;
+    let roundResult = "";
+    let playerChoice = "";
+    let computerChoice = "";
+    let playerPoints = 0;
+    let computerPoints = 0;
+    let RNG = 0;
+
+    while (rounds < MAX_ROUNDS) {
+        console.log("Round " + (rounds + 1) + " of " + MAX_ROUNDS);
+
+        playerChoice = getPlayerChoice();
+        RNG = Math.floor(Math.random() * 3);
+        computerChoice = getComputerChoice(RNG);
+
+        roundResult = playRound(playerChoice, computerChoice);
+
+        if (roundResult === "player") {
+            playerPoints += 1;
+        } else if (roundResult === "computer") {
+            computerPoints += 1;
+        }
+
+        console.log("Player: " + playerChoice);
+        console.log("Computer: " + computerChoice);
+        console.log(getRoundResultString(roundResult));
+        console.log("\n");
+
+        if (roundResult !== "tie") {
+            rounds += 1;
+        }
+    }
+
+    console.log(getGameResultString(playerPoints));
+}
+
+game();

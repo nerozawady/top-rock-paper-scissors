@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+
+    --width-1: 300px;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main {
+    display: flex;
+    gap: 50px;
+}
+
+.player-choice-container,
+.computer-choice-container {
+    width: var(--width-1);
+    height: var(--width-1);
+    margin-bottom: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgb(219, 219, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-choice-text,
+.computer-choice-text {
+    font-size: 70px;
+    font-weight: lighter;
+}
+
+.player-title,
+.computer-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.player-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rock,
+.paper,
+.scissors {
+    width: 75px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.main-vs {
+    align-self: center;
+    font-size: 32px;
+}
